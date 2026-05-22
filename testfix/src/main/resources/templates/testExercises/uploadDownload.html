@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <title>TEST ALIŞTIRMALARI - TESTFIX</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="icon" href="/assets/favicon.ico" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700" rel="stylesheet" />
+    <link href="/css/styles.css" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+		<a class="navbar-brand" href="#page-top">
+						    <img src="/assets/img/testfixx.png" alt="TESTFIX Logo" />
+						</a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive">
+            Menu <i class="fas fa-bars ms-1"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+				<li class="nav-item"><a class="nav-link" href="/">Ana Sayfa</a></li>
+				<li class="nav-item"><a class="nav-link" href="/about">Hakkımızda</a></li>
+		        <li class="nav-item"><a class="nav-link" href="/services">Hizmetlerimiz</a></li>
+				<li class="nav-item dropdown">
+						 <a class="nav-link dropdown-toggle" href="#" id="testDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						        Test Pratikleri
+						  </a>
+
+						   <ul class="dropdown-menu">
+							 <li>
+							 <a class="dropdown-item" href="/testExercises/tooltip">
+							    Tooltip Testleri
+						     </a>
+						   </li>
+							<li>
+							  <a class="dropdown-item" href="/testExercises/loginTest">
+							    Login Testleri
+							  </a>
+							</li>
+							 <li>
+							     <a class="dropdown-item" href="/testExercises/dragAndDropAction">
+						        Drag & Drop Testleri
+				             </a>
+					       </li>
+						   <li>
+						   				 		  <a class="dropdown-item" href="/testExercises/popup">
+						   						        Popup Testleri
+						   					       </a>
+						   						</li>
+												<li>
+																		 <a class="dropdown-item" href="/testExercises/apiTest">
+																			    Apı Testleri
+																	      </a>
+																		 </li>
+																		 <li>
+																		 																		 <a class="dropdown-item" href="/testExercises/uploadDownload">
+																		 																			    Upload-Download Testleri
+																		 																	      </a>
+																		 																		 </li>
+					   </ul>
+					</li>
+
+				<li class="nav-item"><a class="nav-link" href="/blog">Blog</a></li>
+				<li class="nav-item dropdown">
+							    <a class="nav-link dropdown-toggle"
+							       href="#"
+							       role="button"
+							       data-bs-toggle="dropdown"
+							       style="display:flex; align-items:center; gap:6px;">
+
+							        <img src="/assets/img/flags/tr.png"
+							             alt="TR"
+							             style="width:21px; height:21px; border-radius:2px;">
+							        Turkısh
+							    </a>
+
+							    <ul class="dropdown-menu dropdown-menu-end">
+							        <li>
+							            <a class="dropdown-item"
+							               href="/#"
+							               style="display:flex; align-items:center; gap:6px;">
+							                <img src="/assets/img/flags/tr.png"
+							                     alt="TR"
+							                     style="width:21px; height:21px; border-radius:2px;">
+							                Turkısh
+							            </a>
+							        </li>
+							        <li>
+							            <a class="dropdown-item"
+							               href="/#"
+							               style="display:flex; align-items:center; gap:6px;">
+							                <img src="/assets/img/flags/eng.png"
+							                     alt="EN"
+							                     style="width:21px; height:21px; border-radius:2px;">
+							                Englısh
+							            </a>
+							        </li>
+							    </ul>
+							</li>
+			    <li class="nav-item"><a class="nav-link" href="/contact"> Whatsapp'dan Bize Ulaşın</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="masthead">
+    <div class="container">
+        <div class="masthead-heading text-uppercase">TEST ALIŞTIRMALARI</div>
+        <div class="masthead-subheading">TESTFIX / Test Alıştırmaları</div>
+    </div>
+</header>
+
+<section class="page-section bg-light" id="upload-download-test">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-heading text-uppercase">Upload / Download Testi</h2>
+            <h3 class="section-subheading text-muted">
+                Dosya yükleme ve indirme alıştırmaları
+            </h3>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+
+                <div class="card shadow p-5 text-center">
+                    <div class="mb-4">
+                        <h5 class="mb-3">Selenium İle Dosya İndirme</h5>
+                        <a href="/assets/img/errorPage.gif"
+                           download
+                           id="downloadButton"
+                           class="btn btn-success btn-lg">
+                            Download
+                        </a>
+                    
+                    </div>
+
+                    <hr>
+
+                  
+                    <div class="mt-4">
+                        <h5 class="mb-3">Selenium İle Dosya Yükleme</h5>
+
+                        <input type="file"
+                               id="uploadFile"
+                               class="form-control mb-3" />
+
+                        <button class="btn btn-primary btn-lg"
+                                id="uploadButton"
+                                disabled>
+                            Upload
+                        </button>
+
+                        <p id="uploadResult"
+                           class="mt-3 text-success fw-bold"
+                           style="display:none;">
+                            Dosya başarıyla seçildi
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<footer class="footer py-4">
+              <div class="container">
+                  <div class="row align-items-center">
+                      <div class="col-lg-4 text-lg-start">Copyright &copy; Your Website 2025</div>
+                      <div class="col-lg-4 my-3 my-lg-0">
+                          <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                          <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                          <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                      </div>
+                      <div class="col-lg-4 text-lg-end">
+                          <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
+                          <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
+                      </div>
+                  </div>
+              </div>
+          </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/js/scripts.js"></script>
+</body>
+</html>
