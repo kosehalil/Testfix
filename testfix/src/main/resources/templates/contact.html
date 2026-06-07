@@ -1,233 +1,147 @@
 <!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="utf-8" />
-    <title>İLETİŞİM - TESTFIX</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<html lang="tr"
+      xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{base :: Layout(~{::section})}">
 
-    <link rel="icon" href="/assets/favicon.ico" />
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700" rel="stylesheet" />
-    <link href="/css/styles.css" rel="stylesheet" />
-</head>
+<section>
+    <header class="masthead">
 
-<body id="page-top">
+        <div class="container">
 
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-    <div class="container">
-		<a class="navbar-brand" href="#page-top">
-						    <img src="/assets/img/testfixx.png" alt="TESTFIX Logo" />
-						</a>
+            <div class="masthead-heading text-uppercase">
+                İletişim
+            </div>
 
-        <button class="navbar-toggler" type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarResponsive">
-            Menu <i class="fas fa-bars ms-1"></i>
-        </button>
+            <div class="masthead-subheading">
+                TESTFIX / İletişim
+            </div>
 
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-				<li class="nav-item"><a class="nav-link" href="/">Ana Sayfa</a></li>
-				<li class="nav-item"><a class="nav-link" href="/about">Hakkımızda</a></li>
-		        <li class="nav-item"><a class="nav-link" href="/services">Hizmetlerimiz</a></li>
-				<li class="nav-item dropdown">
-				    <a class="nav-link dropdown-toggle"
-				       href="#"
-				       id="testDropdown"
-				       role="button"
-				       data-bs-toggle="dropdown"
-				       aria-expanded="false">
-				        Test Pratikleri
-				    </a>
-
-				    <ul class="dropdown-menu">
-				        <li>
-							<a class="dropdown-item" href="/testExercises/tooltip">
-								Tooltip Testleri
-							  </a>
-				        </li>
-				        <li>
-				            <a class="dropdown-item" href="/testExercises/loginTest">
-				                Login Testleri
-				            </a>
-				        </li>
-				        <li>
-				            <a class="dropdown-item" href="/testExercises/dragAndDropAction">
-				                Drag & Drop Testleri
-				            </a>
-				        </li>
-						<li>
-										 		  <a class="dropdown-item" href="/testExercises/popup">
-												        Popup Testleri
-											       </a>
-												</li>
-												<a class="dropdown-item" href="/testExercises/apiTest">
-																																						       Apı Testleri
-																																						      </a>
-																																					    </li>
-																																						<li>
-																																																							 																		 <a class="dropdown-item" href="/testExercises/uploadDownload">
-																																																							 																			    Upload-Download Testleri
-																																																							 																	      </a>
-																																																							 																		 </li>
-				    </ul>
-				</li>
-
-				<li class="nav-item"><a class="nav-link" href="/blog">Blog</a></li>
-				<li class="nav-item dropdown">
-							    <a class="nav-link dropdown-toggle"
-							       href="#"
-							       role="button"
-							       data-bs-toggle="dropdown"
-							       style="display:flex; align-items:center; gap:6px;">
-
-							        <img src="/assets/img/flags/tr.png"
-							             alt="TR"
-							             style="width:21px; height:21px; border-radius:2px;">
-							        Turkısh
-							    </a>
-
-							    <ul class="dropdown-menu dropdown-menu-end">
-							        <li>
-							            <a class="dropdown-item"
-							               href="/#"
-							               style="display:flex; align-items:center; gap:6px;">
-							                <img src="/assets/img/flags/tr.png"
-							                     alt="TR"
-							                     style="width:21px; height:21px; border-radius:2px;">
-							                Turkısh
-							            </a>
-							        </li>
-							        <li>
-							            <a class="dropdown-item"
-							               href="/#"
-							               style="display:flex; align-items:center; gap:6px;">
-							                <img src="/assets/img/flags/eng.png"
-							                     alt="EN"
-							                     style="width:21px; height:21px; border-radius:2px;">
-							                Englısh
-							            </a>
-							        </li>
-							    </ul>
-							</li>
-			    <li class="nav-item"><a class="nav-link active" href="/contact"> Whatsapp'dan Bize Ulaşın</a></li>
-            </ul>
         </div>
-    </div>
-</nav>
 
-<header class="masthead">
-    <div class="container">
-        <div class="masthead-heading text-uppercase">İLETİŞİM</div>
-        <div class="masthead-subheading">TESTFIX / İletişim</div>
-    </div>
-</header>
+    </header>
 
-<section class="page-section">
-    <div class="container text-center">
-        <h2 class="section-heading text-uppercase">Bizimle İletişime Geçin</h2>
-        <p class="text-muted">
-			Sorularınız, talepleriniz veya iş birliği önerileriniz için aşağıdaki formu doldurabilirsiniz. Ekibimiz en kısa sürede sizinle iletişime geçecektir.
+    <section class="page-section bg-light" id="contact">
 
-			Alternatif olarak bize doğrudan e-posta veya telefon yoluyla da ulaşabilirsiniz:
-        </p>
-		
+        <div class="container">
 
-    </div>
-	
-	<div class="container text-center">
-	        <h2 class="section-heading text-uppercase"></h2>
-	        <p class="text-muted">
-				<p class="text-muted">
-				    <a href="mailto:info@testfix.com"
-				       style="text-decoration:none; color:inherit; display:inline-flex; align-items:center; gap:6px;">
-				        <i class="fas fa-envelope"></i>
-				        info@testfix.com
-				    </a>
-				</p>
+            <div class="text-center mb-5">
 
-				<p class="text-muted">
-				    <a href="https://wa.me/905452556902"
-				       target="_blank"
-				       style="text-decoration:none; color:inherit; display:inline-flex; align-items:center; gap:6px;">
-				        <i class="fab fa-whatsapp" style="color:#25D366;"></i>
-				        +90 545 255 69 02
-				    </a>
-				</p>
+                <h2 class="section-heading text-muted">
+                    Bizimle İletişime Geçin
+                </h2>
 
-	        </p>
-	    </div>
+                <p class="section-subheading text-muted">
+                    Sorularınız, talepleriniz veya iş birliği önerileriniz için bizimle iletişime geçebilirsiniz.
+                </p>
+
+            </div>
+
+            <div class="row g-5">
+                <div class="col-lg-5">
+
+                    <div class="contact-card h-100">
+
+                        <h3 class="mb-4">İletişim Kanalları</h3>
+
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h5>E-Mail</h5>
+                                <p>info@testfix.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <h5>WhatsApp</h5>
+                                <p>+90 545 255 69 02</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-user-clock"></i>
+                            <div>
+                                <h5>Geri Dönüş Süresi</h5>
+                                <p>Ortalama 24 saat içinde dönüş sağlanır.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-7">
+
+                    <div class="contact-card">
+
+                        <form id="contactForm"
+                              th:action="@{/contact}"
+                              method="post">
+
+                            <div class="row">
+
+                                <div class="col-md-6 mb-4">
+
+                                    <input class="form-control modern-input"
+                                           type="text"
+                                           name="name"
+                                           placeholder="Adınız *"
+                                           required>
+
+                                </div>
+
+                                <div class="col-md-6 mb-4">
+
+                                    <input class="form-control modern-input"
+                                           type="email"
+                                           name="email"
+                                           placeholder="E-Mail *"
+                                           required>
+
+                                </div>
+
+                            </div>
+
+                            <div class="mb-4">
+
+                                <input class="form-control modern-input"
+                                       type="tel"
+                                       name="phone"
+                                       placeholder="Telefon Numaranız *"
+                                       required>
+
+                            </div>
+
+                            <div class="mb-4">
+
+                                <textarea class="form-control modern-input"
+                                          rows="7"
+                                          name="message"
+                                          placeholder="Mesajınız *"
+                                          required></textarea>
+
+                            </div>
+
+                            <button class="btn btn-primary btn-xl text-uppercase w-100"
+                                    type="submit">
+
+                                Mesaj Gönder
+
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
 </section>
 
-<section class="page-section" id="contact">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">İletişim Formu</h2>
-                    <h3 class="section-subheading text-muted"></h3>
-                </div>
-                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                    <div class="row align-items-stretch mb-5">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <!-- Name input-->
-                                <input class="form-control" id="name" type="text" placeholder="Adınız *" data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-                            </div>
-                            <div class="form-group">
-                                <!-- Email address input-->
-                                <input class="form-control" id="email" type="email" placeholder="E-mail *" data-sb-validations="required,email" />
-                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-                            </div>
-                            <div class="form-group mb-md-0">
-                                <!-- Phone number input-->
-                                <input class="form-control" id="phone" type="tel" placeholder="Telefon Numaranız *" data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group form-group-textarea mb-md-0">
-                                <!-- Message input-->
-                                <textarea class="form-control" id="message" placeholder="Mesajınız *" data-sb-validations="required"></textarea>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
-                            </div>
-                        </div>
-                    </div>
-               
-                    <div class="d-none" id="submitSuccessMessage">
-                        <div class="text-center text-white mb-3">
-                            <div class="fw-bolder">Form submission successful!</div>
-                            To activate this form, sign up at
-                            <br />
-                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                        </div>
-                    </div>
-                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                  
-                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Mesaj Gönder</button></div>
-                </form>
-            </div>
-        </section>
-		
-		<footer class="footer py-4">
-		              <div class="container">
-		                  <div class="row align-items-center">
-		                      <div class="col-lg-4 text-lg-start">Copyright &copy; Your Website 2025</div>
-		                      <div class="col-lg-4 my-3 my-lg-0">
-		                          <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-		                          <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-		                          <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-		                      </div>
-		                      <div class="col-lg-4 text-lg-end">
-		                          <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
-		                          <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
-		                      </div>
-		                  </div>
-		              </div>
-		          </footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="/js/scripts.js"></script>
-</body>
 </html>

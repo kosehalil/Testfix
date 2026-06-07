@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="tr"
+      xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{base :: Layout(~{::section})}">
+
+<section>
+
+    <header class="masthead">
+        <div class="container">
+
+            <div class="masthead-heading text-uppercase"
+                 th:text="${courseName}">
+                Selenium Eğitimi
+            </div>
+
+            <div class="masthead-subheading">
+                Web Test Otomasyonu
+            </div>
+
+        </div>
+    </header>
+
+    <section class="page-section bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card shadow border-0">
+                        <div class="card-header">
+                            <h4 class="mb-0">Ders İçeriği</h4>
+                        </div>
+
+                        <div class="list-group list-group-flush">
+
+							<button class="list-group-item list-group-item-action"
+							        th:each="video : ${videos}"
+							        th:text="'▶ ' + ${video.lessonOrder} + '. ' + ${video.title}"
+							        th:attr="data-url=@{'/videos/' + ${video.fileName}},
+							                 data-desc=${video.description}"
+							        onclick="changeVideo(this)">
+							</button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-8">
+                    <div class="card shadow border-0">
+                        <div class="card-body">
+                            <h3 class="mb-3">
+                                Eğitim Videosu
+                            </h3>
+                            <video id="videoPlayer"
+                                   class="w-100"
+                                   controls
+                                   preload="metadata"
+                                   style="background:black;">
+
+                     
+                                <source th:if="${videos != null and !videos.isEmpty()}"
+                                        th:src="@{'/videos/' + ${videos[0].fileName}}"
+                                        type="video/mp4">
+
+                            </video>
+
+                            <hr>               
+                            <p id="videoDescription"
+                               th:if="${videos != null and !videos.isEmpty()}"
+                               th:text="${videos[0].description}">
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+	<script>
+	    function changeVideo(element) {
+
+	        const url = element.getAttribute("data-url");
+	        const desc = element.getAttribute("data-desc");
+
+	        const player = document.getElementById("videoPlayer");
+
+	        player.src = url;
+	        player.load();
+	        player.play();
+
+	        const descBox = document.getElementById("videoDescription");
+	        if (descBox) {
+	            descBox.innerText = desc;
+	        }
+	    }
+	</script>
+
+</section>
+
+</html>

@@ -1,10 +1,18 @@
 package com.kosehalil.controller;
 
+import com.kosehalil.repository.NewsRepository;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class HomeController {
+
+    private final NewsRepository newsRepository;
+
+    HomeController(NewsRepository newsRepository) {
+        this.newsRepository = newsRepository;
+    }
 
     @GetMapping("/")
     public String index() {
@@ -21,11 +29,6 @@ public class HomeController {
         return "portfolio";
     }
     
-    @GetMapping("/testExercise")
-    public String testExercise() {
-        return "testExercise";
-    }
-
     @GetMapping("/about")
     public String about() {
         return "about";
@@ -76,5 +79,22 @@ public class HomeController {
     	return "testExercises/uploadDownload";
     }
     
+    @GetMapping("/testExercises/testScenario")
+    public String testScenario() {
+    	return "testExercises/testScenario";
+    }
     
+    @GetMapping("/testExercises/requirementsAnalysis")
+    public String requirementsAnalysis() {
+    	return "testExercises/requirementsAnalysis";
+    }
+    
+    @GetMapping("/testNews")
+    public String testNews(Model model) {
+
+        model.addAttribute("newsList",
+                newsRepository.findAll());
+
+        return "testNews";
+    }
 }

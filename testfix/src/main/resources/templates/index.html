@@ -1,266 +1,547 @@
 <!DOCTYPE html>
-<html lang="tr">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>TESTFIX</title>
-        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-        <link href="/css/styles.css" rel="stylesheet" />
-    </head>
-    <body id="page-top">
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-            <div class="container">
-				<a class="navbar-brand" href="#page-top">
-				    <img src="/assets/img/testfixx.png" alt="TESTFIX Logo" />
-				</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars ms-1"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-						<li class="nav-item"><a class="nav-link active" href="#">Ana Sayfa</a></li>
-						<li class="nav-item"><a class="nav-link" href="/about">Hakkımızda</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/services">Hizmetlerimiz</a></li>
-						<li class="nav-item dropdown">
-						    <a class="nav-link dropdown-toggle"
-						       href="#"
-						       id="testDropdown"
-						       role="button"
-						       data-bs-toggle="dropdown"
-						       aria-expanded="false">
-						        Test Pratikleri
-						    </a>
+<html lang="tr"
+      xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{base :: Layout(~{::section})}">
 
-						    <ul class="dropdown-menu">
-						        <li>
-						            <a class="dropdown-item" href="/testExercises/tooltip">
-						                Tooltip Testleri
-						            </a>
-						        </li>
-						        <li>
-						            <a class="dropdown-item" href="/testExercises/loginTest">
-						                Login Testleri
-						            </a>
-						        </li>
-						        <li>
-						            <a class="dropdown-item" href="/testExercises/dragAndDropAction">
-						                Drag & Drop Testleri
-						            </a>
-						        </li>
-								<li>
-									 <a class="dropdown-item" href="/testExercises/popup">
-								       Popup Testleri
-								      </a>
-							    </li>
-								<a class="dropdown-item" href="/testExercises/apiTest">
-									   Apı Testleri
-								   </a>
-							    </li>
-								<li>
-								 <a class="dropdown-item" href="/testExercises/uploadDownload">
-								       Upload-Download Testleri																																																 																	      </a>
-								 </li>
-						    </ul>
-						</li>
+<section>
 
-						<li class="nav-item"><a class="nav-link" href="/blog">Blog</a></li>
-						<li class="nav-item dropdown">
-						    <a class="nav-link dropdown-toggle"
-						       href="#"
-						       role="button"
-						       data-bs-toggle="dropdown"
-						       style="display:flex; align-items:center; gap:6px;">
+    <header class="masthead">
+        <div class="container">
 
-						        <img src="/assets/img/flags/tr.png"
-						             alt="TR"
-						             style="width:21px; height:21px; border-radius:2px;">
-						        Turkısh
-						    </a>
+            <div class="masthead-subheading">
+                GELİŞ, DÖNÜŞ, GÜÇLEN
+            </div>
 
-						    <ul class="dropdown-menu dropdown-menu-end">
-						        <li>
-						            <a class="dropdown-item"
-						               href="/#"
-						               style="display:flex; align-items:center; gap:6px;">
-						                <img src="/assets/img/flags/tr.png"
-						                     alt="TR"
-						                     style="width:21px; height:21px; border-radius:2px;">
-						                Turkısh
-						            </a>
-						        </li>
-						        <li>
-						            <a class="dropdown-item"
-						               href="/#"
-						               style="display:flex; align-items:center; gap:6px;">
-						                <img src="/assets/img/flags/eng.png"
-						                     alt="EN"
-						                     style="width:21px; height:21px; border-radius:2px;">
-						                Englısh
-						            </a>
-						        </li>
-						    </ul>
-						</li>
+            <div class="masthead-heading text-uppercase">
+                Test Süreçlerinde İnovasyonun Yeni Adı TESTFIX
+            </div>
 
-                        <li class="nav-item"><a class="nav-link" href="/contact"> Whatsapp'dan Bize Ulaşın</a></li>
-                    </ul>
+            <a class="btn btn-primary btn-xl text-uppercase"
+               href="#services">
+
+                TESTFIX'e Katıl - Bugünün Tester'ı, Yarının Lideri Ol
+            </a>
+
+        </div>
+    </header>
+
+    <section class="page-section bg-light" id="services">
+
+        <div class="container">
+
+            <div class="text-center mb-5">
+
+                <h2 class="section-heading text-uppercase">
+                    Hizmetlerimiz
+                </h2>
+
+                <h3 class="section-subheading text-muted">
+                    Test otomasyonu ve kalite çözümleri
+                </h3>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-4 col-sm-6 mb-4">
+
+                    <div class="portfolio-item">
+
+                        <div class="portfolio-image">
+
+                            <img class="img-fluid"
+                                 src="/assets/img/selenium.jpg"
+                                 alt="Selenium"/>
+
+                        </div>
+
+                        <div class="portfolio-caption">
+
+                            <div class="portfolio-caption-heading">
+                                Selenium
+                            </div>
+
+                            <div class="portfolio-caption-subheading text-muted">
+                                Selenium ile Web Otomasyon Testi Eğitimleri
+                            </div>
+
+                        </div>
+
+                    </div>
+
                 </div>
+
+				                <div class="col-lg-4 col-sm-6 mb-4">
+
+				                    <div class="portfolio-item">
+
+				                        <div class="portfolio-image">
+				                            <img class="img-fluid"
+				                                 src="/assets/img/postman.png"
+				                                 alt="Postman"/>
+				                        </div>
+
+				                        <div class="portfolio-caption">
+
+				                            <div class="portfolio-caption-heading">
+				                                Postman
+				                            </div>
+
+				                            <div class="portfolio-caption-subheading text-muted">
+				                                API test eğitimleri
+				                            </div>
+
+				                        </div>
+
+				                    </div>
+
+				                </div>
+
+                <div class="col-lg-4 col-sm-6 mb-4">
+
+                    <div class="portfolio-item">
+
+                        <div class="portfolio-image">
+
+                            <img class="img-fluid"
+                                 src="/assets/img/cypress.png"
+                                 alt="Cypress"/>
+
+                        </div>
+
+                        <div class="portfolio-caption">
+
+                            <div class="portfolio-caption-heading">
+                                Cypress
+                            </div>
+
+                            <div class="portfolio-caption-subheading text-muted">
+                                Cypress ile Web Otomasyon Testi Eğitimleri
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4 col-sm-6 mb-4">
+
+                    <div class="portfolio-item">
+
+                        <div class="portfolio-image">
+
+                            <img class="img-fluid"
+                                 src="/assets/img/appiumm.png"
+                                 alt="Appium"/>
+
+                        </div>
+
+                        <div class="portfolio-caption">
+
+                            <div class="portfolio-caption-heading">
+                                Appium
+                            </div>
+
+                            <div class="portfolio-caption-subheading text-muted">
+                                Appium ile Mobil Otomasyon Testi Eğitimleri
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4 col-sm-6 mb-4">
+
+                    <div class="portfolio-item">
+
+                        <div class="portfolio-image">
+
+                            <img class="img-fluid"
+                                 src="/assets/img/Jmeter.png"
+                                 alt="JMeter"/>
+
+                        </div>
+
+                        <div class="portfolio-caption">
+
+                            <div class="portfolio-caption-heading">
+                                JMeter
+                            </div>
+
+                            <div class="portfolio-caption-subheading text-muted">
+                                JMeter ile Performans Testi Eğitimleri
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4 col-sm-6 mb-4">
+
+                    <div class="portfolio-item">
+
+                        <div class="portfolio-image">
+
+                            <img class="img-fluid"
+                                 src="/assets/img/playwright.png"
+                                 alt="Playwright"/>
+
+                        </div>
+
+                        <div class="portfolio-caption">
+
+                            <div class="portfolio-caption-heading">
+                                Playwright
+                            </div>
+
+                            <div class="portfolio-caption-subheading text-muted">
+                                Playwright ile Web Otomasyon Testi Eğitimleri
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
-        </nav>
-        <!-- Masthead-->
-        <header class="masthead">
-            <div class="container">
-                <div class="masthead-subheading">GELİŞ, DÖNÜŞ, GÜÇLEN</div>
-                <div class="masthead-heading text-uppercase">Test Süreçlerinde İnovasyonun Yeni Adı TESTFIX</div>
-                <a class="btn btn-primary btn-xl text-uppercase" href="#services">TESTFIX'e Katıl - Bugünün Tester'ı, Yarının Lideri Ol</a>
-            </div>
-        </header>
-      
-       
-		<section class="page-section bg-light" id="portfolio">
-		    <div class="container">
-		        <div class="text-center mb-5">
-		            <h2 class="section-heading text-uppercase">Hizmetlerimiz</h2>
-		            <h3 class="section-subheading text-muted">
-		                Test otomasyonu ve kalite çözümleri
-		            </h3>
-		        </div>
 
-		        <div class="row">
+        </div>
 
-		            <!-- Selenium -->
-		            <div class="col-lg-4 col-sm-6 mb-4">
-		                <div class="portfolio-item">
-		                    <div class="portfolio-image">
-		                        <img class="img-fluid"
-		                             src="/assets/img/selenium.jpg"
-		                             alt="Selenium" />
-		                    </div>
-		                    <div class="portfolio-caption">
-		                        <div class="portfolio-caption-heading">Selenium</div>
-		                        <div class="portfolio-caption-subheading text-muted">
-		                            Selenium ile Web Otomasyon Testi Eğitimleri
-		                        </div>
-		                    </div>
-		                </div>
-		            </div>
+    </section>
+	<section class="page-section bg-dark text-white">
 
-		            <!-- Postman -->
-		            <div class="col-lg-4 col-sm-6 mb-4">
-		                <div class="portfolio-item">
-		                    <div class="portfolio-image">
-		                        <img class="img-fluid"
-		                             src="/assets/img/postman.png"
-		                             alt="Postman" />
-		                    </div>
-		                    <div class="portfolio-caption">
-		                        <div class="portfolio-caption-heading">Postman</div>
-		                        <div class="portfolio-caption-subheading text-muted">
-		                            Postman ile API Testi Eğitimleri
-		                        </div>
-		                    </div>
-		                </div>
-		            </div>
+	    <div class="container">
 
-		            <!-- Cypress -->
-		            <div class="col-lg-4 col-sm-6 mb-4">
-		                <div class="portfolio-item">
-		                    <div class="portfolio-image">
-		                        <img class="img-fluid"
-		                             src="/assets/img/cypress.png"
-		                             alt="Cypress" />
-		                    </div>
-		                    <div class="portfolio-caption">
-		                        <div class="portfolio-caption-heading">Cypress</div>
-		                        <div class="portfolio-caption-subheading text-muted">
-		                            Cypress ile Web Otomasyon Testi Eğitimleri
-		                        </div>
-		                    </div>
-		                </div>
-		            </div>
+	        <div class="text-center mb-5">
 
-		            <!-- Appium -->
-		            <div class="col-lg-4 col-sm-6 mb-4">
-		                <div class="portfolio-item">
-		                    <div class="portfolio-image">
-		                        <img class="img-fluid"
-		                             src="/assets/img/appium.webp"
-		                             alt="Appium" />
-		                    </div>
-		                    <div class="portfolio-caption">
-		                        <div class="portfolio-caption-heading">Appium</div>
-		                        <div class="portfolio-caption-subheading text-muted">
-		                            Appium ile Mobil Otomasyon Testi Eğitimleri
-		                        </div>
-		                    </div>
-		                </div>
-		            </div>
+	            <h2 class="section-heading text-uppercase">
+	                TESTFIX Rakamlarla
+	            </h2>
 
-		            <!-- JMeter -->
-		            <div class="col-lg-4 col-sm-6 mb-4">
-		                <div class="portfolio-item">
-		                    <div class="portfolio-image">
-		                        <img class="img-fluid"
-		                             src="/assets/img/Jmeter.png"
-		                             alt="JMeter" />
-		                    </div>
-		                    <div class="portfolio-caption">
-		                        <div class="portfolio-caption-heading">JMeter</div>
-		                        <div class="portfolio-caption-subheading text-muted">
-		                            JMeter ile Performans Testi Eğitimleri
-		                        </div>
-		                    </div>
-		                </div>
-		            </div>
+	        </div>
 
-		            <!-- Playwright -->
-		            <div class="col-lg-4 col-sm-6 mb-4">
-		                <div class="portfolio-item">
-		                    <div class="portfolio-image">
-		                        <img class="img-fluid"
-		                             src="/assets/img/playwright.png"
-		                             alt="Playwright" />
-		                    </div>
-		                    <div class="portfolio-caption">
-		                        <div class="portfolio-caption-heading">Playwright</div>
-		                        <div class="portfolio-caption-subheading text-muted">
-		                            Playwright ile Web Otomasyon Testi Eğitimleri
-		                        </div>
-		                    </div>
-		                </div>
-		            </div>
+	        <div class="row text-center">
 
-		        </div>
-		    </div>
-		</section>
+	            <div class="col-md-4">
+	                <h1>10+</h1>
+	                <p>Test Senaryosu</p>
+	            </div>
 
-        
-  
-		<footer class="footer py-4">
-		              <div class="container">
-		                  <div class="row align-items-center">
-		                      <div class="col-lg-4 text-lg-start">Copyright &copy; Your Website 2025</div>
-		                      <div class="col-lg-4 my-3 my-lg-0">
-		                          <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-		                          <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-		                          <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-		                      </div>
-		                      <div class="col-lg-4 text-lg-end">
-		                          <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
-		                          <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
-		                      </div>
-		                  </div>
-		              </div>
-		          </footer>
-     
-			
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="/js/scripts.js"></script>
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    </body>
+	            <div class="col-md-4">
+	                <h1>10+</h1>
+	                <p>Test Pratiği</p>
+	            </div>
+
+	            <div class="col-md-4">
+	                <h1>41+</h1>
+	                <p>Eğitim Videosu</p>
+	            </div>
+
+	        
+
+	        </div>
+
+	    </div>
+
+	</section>
+
+	<section class="page-section bg-light">
+
+	    <div class="container">
+
+	        <div class="text-center mb-5">
+
+	            <h2 class="section-heading text-uppercase">
+	                Popüler Eğitimler
+	            </h2>
+
+	            <h3 class="section-subheading text-muted">
+	                En çok görüntülenen eğitim içerikleri
+	            </h3>
+
+	        </div>
+
+	        <div class="row">
+
+	            <div class="col-md-4 mb-4">
+
+	                <div class="card shadow h-100">
+
+	                    <div class="card-body text-center">
+
+	                        <h4>Selenium</h4>
+
+	                        <p>
+	                            Baştan sona Selenium WebDriver eğitimi.
+	                        </p>
+
+	                        <a th:href="@{/courses/selenium}"
+	                           class="btn btn-primary">
+	                            Eğitime Git
+	                        </a>
+
+	                    </div>
+
+	                </div>
+
+	            </div>
+
+	            <div class="col-md-4 mb-4">
+
+	                <div class="card shadow h-100">
+
+	                    <div class="card-body text-center">
+
+	                        <h4>Postman</h4>
+
+	                        <p>
+	                            API test süreçlerini öğrenin.
+	                        </p>
+
+	                        <a th:href="@{/courses/postman}"
+	                           class="btn btn-primary">
+	                            Eğitime Git
+	                        </a>
+
+	                    </div>
+
+	                </div>
+
+	            </div>
+
+	            <div class="col-md-4 mb-4">
+
+	                <div class="card shadow h-100">
+
+	                    <div class="card-body text-center">
+
+	                        <h4>Playwright</h4>
+
+	                        <p>
+	                            Modern web otomasyon test eğitimi.
+	                        </p>
+
+	                        <a th:href="@{/courses/playwright}"
+	                           class="btn btn-primary">
+	                            Eğitime Git
+	                        </a>
+
+	                    </div>
+
+	                </div>
+
+	            </div>
+
+	        </div>
+
+	    </div>
+
+	</section>
+
+	<section class="page-section">
+
+	    <div class="container">
+
+	        <div class="text-center mb-5">
+
+	            <h2 class="section-heading text-uppercase">
+	                Son Blog Yazıları
+	            </h2>
+	        </div>
+
+	        <div class="row">
+
+	            <div class="col-md-4 mb-4">
+
+	                <div class="card shadow h-100">
+
+	                    <div class="card-body">
+
+	                        <h5>
+	                            QA Test Mülakat Soruları
+	                        </h5>
+
+	                        <p>
+	                            QA mülakatlarında en sık karşılaşılan sorular.
+	                        </p>
+
+	                        <a th:href="@{/blog}"
+	                           class="btn btn-outline-dark">
+	                            Oku
+	                        </a>
+
+	                    </div>
+
+	                </div>
+
+	            </div>
+
+	            <div class="col-md-4 mb-4">
+
+	                <div class="card shadow h-100">
+
+	                    <div class="card-body">
+
+	                        <h5>
+	                            Selenium Nedir?
+	                        </h5>
+
+	                        <p>
+	                            Selenium'un temel bileşenleri ve kullanım alanları.
+	                        </p>
+
+	                        <a th:href="@{/blog}"
+	                           class="btn btn-outline-dark">
+	                            Oku
+	                        </a>
+
+	                    </div>
+
+	                </div>
+
+	            </div>
+
+	            <div class="col-md-4 mb-4">
+
+	                <div class="card shadow h-100">
+
+	                    <div class="card-body">
+
+	                        <h5>
+	                            API Testlerine Giriş
+	                        </h5>
+
+	                        <p>
+	                            Postman ile API test süreçlerine başlangıç.
+	                        </p>
+
+	                        <a th:href="@{/blog}"
+	                           class="btn btn-outline-dark">
+	                            Oku
+	                        </a>
+
+	                    </div>
+
+	                </div>
+
+	            </div>
+
+	        </div>
+
+	    </div>
+
+	</section>
+
+	<section class="page-section bg-light">
+
+	    <div class="container">
+
+	        <div class="text-center mb-5">
+
+	            <h2 class="section-heading text-uppercase">
+	                Sık Sorulan Sorular
+	            </h2>
+
+	        </div>
+
+	        <div class="accordion" id="faqAccordion">
+
+	            <div class="accordion-item">
+
+	                <h2 class="accordion-header">
+
+	                    <button class="accordion-button"
+	                            type="button"
+	                            data-bs-toggle="collapse"
+	                            data-bs-target="#faq1">
+
+	                        TESTFIX ücretsiz mi?
+
+	                    </button>
+
+	                </h2>
+
+	                <div id="faq1"
+	                     class="accordion-collapse collapse show">
+
+	                    <div class="accordion-body">
+
+	                        Evet, Eğitimlerin ve test pratiklerinin bütün kısımları ücretsizdir.
+
+	                    </div>
+
+	                </div>
+
+	            </div>
+
+	            <div class="accordion-item">
+
+	                <h2 class="accordion-header">
+
+	                    <button class="accordion-button collapsed"
+	                            type="button"
+	                            data-bs-toggle="collapse"
+	                            data-bs-target="#faq2">
+
+	                        Eğitimlere erişmek için üyelik gerekli mi?
+
+	                    </button>
+
+	                </h2>
+
+	                <div id="faq2"
+	                     class="accordion-collapse collapse">
+
+	                    <div class="accordion-body">
+
+	                        Hayır. Hazır tanımlı kullanıcılar tarafından görüntülenebilir.
+
+	                    </div>
+
+	                </div>
+
+	            </div>
+
+	            <div class="accordion-item">
+
+	                <h2 class="accordion-header">
+
+	                    <button class="accordion-button collapsed"
+	                            type="button"
+	                            data-bs-toggle="collapse"
+	                            data-bs-target="#faq3">
+
+	                        Yeni içerikler ekleniyor mu?
+
+	                    </button>
+
+	                </h2>
+
+	                <div id="faq3"
+	                     class="accordion-collapse collapse">
+
+	                    <div class="accordion-body">
+
+	                        Evet. TESTFIX düzenli olarak yeni eğitim ve test pratikleri yayınlar.
+
+	                    </div>
+
+	                </div>
+
+	            </div>
+
+	        </div>
+
+	    </div>
+
+	</section>
+
+</section>
+
 </html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr"
+      xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{base :: Layout(~{::section})}">
+
+<section>
+
+    <div class="container mt-5">
+        <div class="card shadow p-4">
+            <h3 class="mb-4">Yeni Kullanıcı Oluştur</h3>
+
+            <form th:action="@{/admin/users/save}"
+                  method="post">
+                <div class="mb-3">
+                    <label>Kullanıcı Adı</label>
+                    <input type="text"
+                           name="username"
+                           class="form-control"
+                           required>
+                </div>
+
+                <div class="mb-3">
+                    <label>Şifre</label>
+                    <input type="password"
+                           name="password"
+                           class="form-control"
+                           required>
+                </div>
+
+                <div class="mb-3">
+                    <label>Rol</label>
+
+                    <select name="role"
+                            class="form-select">
+
+                        <option value="ADMIN">ADMIN</option>
+                        <option value="USER">USER</option>
+
+                    </select>
+                </div>
+
+                <button class="btn btn-success">
+                    Kaydet
+                </button>
+
+                <a th:href="@{/admin/users}"
+                   class="btn btn-secondary">
+                    Geri Dön
+                </a>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+</html>

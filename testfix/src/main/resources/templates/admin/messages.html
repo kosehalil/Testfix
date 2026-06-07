@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="tr"
+      xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{base :: Layout(~{::section})}">
+
+<section>
+    <header class="masthead">
+        <div class="container">
+
+            <div class="masthead-heading text-uppercase">
+                Gelen Mesajlar
+            </div>
+
+            <div class="masthead-subheading">
+                Admin / Contact Messages
+            </div>
+
+        </div>
+    </header>
+
+    <section class="page-section bg-light">
+
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <h2 class="section-heading text-uppercase">Mesaj Yönetimi</h2>
+                <p class="section-subheading text-muted">
+                    Kullanıcılardan gelen tüm iletişim mesajları burada listelenir.
+                </p>
+            </div>
+
+            <div class="card shadow p-4">
+
+                <div class="table-responsive">
+
+                    <table class="table table-hover align-middle">
+
+                        <thead class="table-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Ad</th>
+                            <th>Email</th>
+                            <th>Telefon</th>
+                            <th>Mesaj</th>
+                            <th>Tarih</th>
+                            <th>İşlem</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+
+                        <tr th:each="msg : ${messages}">
+
+                            <td th:text="${msg.id}"></td>
+                            <td th:text="${msg.name}"></td>
+                            <td th:text="${msg.email}"></td>
+                            <td th:text="${msg.phone}"></td>
+
+                            <td style="max-width: 300px;">
+                                <span th:text="${msg.message}"></span>
+                            </td>
+
+                            <td th:text="${msg.createdAt}"></td>
+
+                            <td>
+								<a th:href="@{/admin/messages/delete/{id}(id=${msg.id})}"
+								   class="btn btn-sm btn-danger"
+								   onclick="return confirm('Bu mesaj silinsin mi?')">
+
+								    Sil
+
+								</a>
+                            </td>
+
+                        </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</section>
+
+</html>

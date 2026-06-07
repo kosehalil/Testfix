@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="tr"
+      xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{base :: Layout(~{::section})}">
+
+<section>
+
+    <header class="masthead">
+
+        <div class="container">
+
+            <div class="masthead-heading text-uppercase">
+                GEREKSİNİM ANALİZİ
+            </div>
+
+            <div class="masthead-subheading">
+                TESTFIX / Gereksinim Analizi Pratiği
+            </div>
+
+        </div>
+
+    </header>
+
+    <section class="page-section bg-light">
+
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-heading text-uppercase">
+                    Gereksinim Analizi Yönetimi
+                </h2>
+                <p class="text-muted">
+                    Eksik gereksinimler analiz edilerek iş analistine sorular oluşturulur.
+                </p>
+
+            </div>
+            <div class="card shadow mb-5 border-0">
+
+                <div class="card-body p-4">
+
+                    <div class="border-bottom pb-2 mb-3">
+                        <h4 class="mb-0">Yeni Gereksinim Analizi Ekle</h4>
+                    </div>
+
+					<form action="/requirementsAnalysis/save" method="post">
+
+					    <div class="mb-3">
+					        <label class="form-label fw-semibold">
+					            Tespit Edilen Eksik Nokta
+					        </label>
+					        <input name="missingPoint"
+					               class="form-control"
+					               placeholder="Örn: Login yetkilendirme eksikliği">
+					    </div>
+
+					    <div class="mb-3">
+					        <label class="form-label fw-semibold">
+					            Açıklama
+					        </label>
+					        <textarea name="description"
+					                  class="form-control"
+					                  rows="4"
+					                  placeholder="Eksikliğin detayını açıklayın"></textarea>
+					    </div>
+
+					    <div class="mb-3">
+					        <label class="form-label fw-semibold">
+					            İş Analistine Sorulacak Soru
+					        </label>
+					        <textarea name="question"
+					                  class="form-control"
+					                  rows="3"
+					                  placeholder="Örn: Bu süreçte kullanıcı rol bazlı mı çalışmalı?"></textarea>
+					    </div>
+
+					    <div class="d-flex justify-content-end gap-2">
+					        <button type="reset" class="btn btn-outline-secondary">
+					            Temizle
+					        </button>
+
+					        <button type="submit" class="btn btn-primary px-4">
+					            Kaydet
+					        </button>
+					    </div>
+
+					</form>
+
+                </div>
+
+            </div>
+            <div class="table-responsive">
+
+                <table class="table table-bordered table-hover bg-white shadow align-middle">
+
+                    <thead class="table-dark">
+
+                    <tr>
+                        <th>Tespit Edilen Eksik Nokta</th>
+                        <th>Açıklama</th>
+                        <th>İş Analistine Sorulacak Soru</th>
+                        <th style="width: 160px;">İşlemler</th>
+                    </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                    <tr th:if="${#lists.isEmpty(requirements)}">
+                        <td colspan="4" class="text-center text-muted py-4">
+                            Henüz kayıtlı gereksinim bulunmuyor.
+                        </td>
+                    </tr>
+
+                    <tr th:each="r : ${requirements}">
+
+                        <td th:text="${r.missingPoint}"></td>
+
+                        <td th:text="${r.description}"></td>
+
+                        <td th:text="${r.question}"></td>
+
+                        <td>
+
+                            <a th:href="@{'/requirementsAnalysis/delete/' + ${r.id}}"
+                               class="btn btn-sm btn-danger"
+                               onclick="return confirm('Silmek istediğinize emin misiniz?')">
+                                Sil
+                            </a>
+
+                        </td>
+                    </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</section>
+
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="tr"
+      xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{base :: Layout(~{::section})}">
+
+<section>
+    <header class="masthead">
+
+        <div class="container">
+
+            <div class="masthead-heading text-uppercase">
+                TEST SENARYOLARI
+            </div>
+
+            <div class="masthead-subheading">
+                TESTFIX / Test Scenario Practice
+            </div>
+
+        </div>
+
+    </header>
+
+    <section class="page-section bg-light">
+
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-heading text-uppercase">
+                    Test Senaryosu Yönetimi
+                </h2>
+                <p class="text-muted">
+                    Kullanıcılar manuel olarak test senaryosu oluşturabilir ve yönetebilir.
+                </p>
+
+            </div>
+            <div class="card shadow mb-5">
+                <div class="card-body">
+			
+                    <h4 class="mb-4">
+                        Yeni Test Senaryosu Ekle
+                    </h4>
+
+					<form action="/testExercise/save" method="post">
+
+					    <div class="mb-3">
+					        <label class="form-label fw-semibold">Test ID</label>
+					        <input name="testId"
+					               class="form-control"
+					               placeholder="Örn: TC001 / Login Testi">
+					    </div>
+
+					    <div class="mb-3">
+					        <label class="form-label fw-semibold">Açıklama</label>
+					        <input name="description"
+					               class="form-control"
+					               placeholder="Test senaryosu kısa açıklaması">
+					    </div>
+
+					    <div class="mb-3">
+					        <label class="form-label fw-semibold">Test Adımları</label>
+					        <textarea name="steps"
+					                  class="form-control"
+					                  rows="5"
+					                  placeholder="1. Adım girilir&#10;2. İşlem yapılır&#10;3. Sonuç kontrol edilir"></textarea>
+					    </div>
+
+					    <div class="mb-3">
+					        <label class="form-label fw-semibold">Beklenen Sonuç</label>
+					        <textarea name="expectedResult"
+					                  class="form-control"
+					                  rows="3"
+					                  placeholder="Beklenen sistem davranışı"></textarea>
+					    </div>
+
+					    <div class="d-flex justify-content-end">
+					        <button type="submit" class="btn btn-primary px-4">
+					            Kaydet
+					        </button>
+					    </div>
+
+					</form>
+
+                </div>
+
+            </div>
+            <div class="table-responsive">
+
+                <table class="table table-bordered table-hover bg-white shadow align-middle">
+
+                    <thead class="table-dark">
+
+                    <tr>
+                        <th style="width: 120px;">Test ID</th>
+                        <th>Açıklama</th>
+                        <th>Test Adımları</th>
+                        <th>Beklenen Sonuç</th>
+                        <th style="width: 180px;">İşlemler</th>
+                    </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                    <tr th:if="${#lists.isEmpty(scenarios)}">
+
+                        <td colspan="5"
+                            class="text-center text-muted py-4">
+
+                            Henüz kayıtlı test senaryosu bulunmuyor.
+
+                        </td>
+
+                    </tr>
+
+                    <tr th:each="s : ${scenarios}">
+                        <td th:text="${s.testId}"></td>
+                        <td th:text="${s.description}"></td>
+                        <td th:utext="${#strings.replace(s.steps, '\n', '<br/>')}"></td>
+                        <td th:text="${s.expectedResult}"></td>
+
+                        <td>
+
+          
+
+                            <a th:href="@{'/testExercise/delete/' + ${s.id}}"
+                               class="btn btn-danger btn-sm"
+                               onclick="return confirm('Bu test senaryosunu silmek istediğinize emin misiniz?')">
+
+                                Sil
+
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</section>
+
+</html>

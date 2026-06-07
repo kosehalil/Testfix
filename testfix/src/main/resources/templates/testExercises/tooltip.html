@@ -1,227 +1,139 @@
 <!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="utf-8" />
-    <title>TEST ALIŞTIRMALARI - TESTFIX</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<html lang="tr"
+      xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{base :: Layout(~{::section})}">
 
-    <link rel="icon" href="/assets/favicon.ico" />
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700" rel="stylesheet" />
-    <link href="/css/styles.css" rel="stylesheet" />
-</head>
+<section>
 
-<body id="page-top">
+    <header class="masthead">
 
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-    <div class="container">
-		<a class="navbar-brand" href="#page-top">
-						    <img src="/assets/img/testfixx.png" alt="TESTFIX Logo" />
-						</a>
+        <div class="container">
 
-        <button class="navbar-toggler" type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarResponsive">
-            Menu <i class="fas fa-bars ms-1"></i>
-        </button>
+            <div class="masthead-heading text-uppercase">
+                TEST ALIŞTIRMALARI
+            </div>
 
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-				<li class="nav-item"><a class="nav-link" href="/">Ana Sayfa</a></li>
-				<li class="nav-item"><a class="nav-link" href="/about">Hakkımızda</a></li>
-		        <li class="nav-item"><a class="nav-link" href="/services">Hizmetlerimiz</a></li>
-				<li class="nav-item dropdown">
-						 <a class="nav-link dropdown-toggle" href="#" id="testDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-						        Test Pratikleri
-						  </a>
+            <div class="masthead-subheading">
+                TESTFIX / Tooltip Testleri
+            </div>
 
-						   <ul class="dropdown-menu">
-							 <li>
-							 <a class="dropdown-item" href="/testExercises/tooltip">
-							    Tooltip Testleri
-						     </a>
-						   </li>
-							<li>
-							  <a class="dropdown-item" href="/testExercises/loginTest">
-							    Login Testleri
-							  </a>
-							</li>
-							 <li>
-							     <a class="dropdown-item" href="/testExercises/dragAndDropAction">
-						        Drag & Drop Testleri
-				             </a>
-					       </li>
-						   <li>
-						   				 		  <a class="dropdown-item" href="/testExercises/popup">
-						   						        Popup Testleri
-						   					       </a>
-						   						</li>
-												<li>
-																		 <a class="dropdown-item" href="/testExercises/apiTest">
-																			    Apı Testleri
-																	      </a>
-																		 </li>
-																		 <li>
-																		 																	 																		 <a class="dropdown-item" href="/testExercises/uploadDownload">
-																		 																	 																			    Upload-Download Testleri
-																		 																	 																	      </a>
-																		 																	 																		 </li>
-					   </ul>
-					</li>
-
-				<li class="nav-item"><a class="nav-link" href="/blog">Blog</a></li>
-				<li class="nav-item dropdown">
-							    <a class="nav-link dropdown-toggle"
-							       href="#"
-							       role="button"
-							       data-bs-toggle="dropdown"
-							       style="display:flex; align-items:center; gap:6px;">
-
-							        <img src="/assets/img/flags/tr.png"
-							             alt="TR"
-							             style="width:21px; height:21px; border-radius:2px;">
-							        Turkısh
-							    </a>
-
-							    <ul class="dropdown-menu dropdown-menu-end">
-							        <li>
-							            <a class="dropdown-item"
-							               href="/#"
-							               style="display:flex; align-items:center; gap:6px;">
-							                <img src="/assets/img/flags/tr.png"
-							                     alt="TR"
-							                     style="width:21px; height:21px; border-radius:2px;">
-							                Turkısh
-							            </a>
-							        </li>
-							        <li>
-							            <a class="dropdown-item"
-							               href="/#"
-							               style="display:flex; align-items:center; gap:6px;">
-							                <img src="/assets/img/flags/eng.png"
-							                     alt="EN"
-							                     style="width:21px; height:21px; border-radius:2px;">
-							                Englısh
-							            </a>
-							        </li>
-							    </ul>
-							</li>
-			    <li class="nav-item"><a class="nav-link" href="/contact"> Whatsapp'dan Bize Ulaşın</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-<!-- HEADER -->
-<header class="masthead">
-    <div class="container">
-        <div class="masthead-heading text-uppercase">TEST ALIŞTIRMALARI</div>
-        <div class="masthead-subheading">TESTFIX / Test Alıştırmaları</div>
-    </div>
-</header>
-
-<!-- ================= TOOLTIP TEST SECTION ================= -->
-<section class="page-section bg-light" id="tooltip-test">
-    <div class="container">
-
-        <div class="text-center">
-            <h2 class="section-heading text-uppercase">Selenium Tooltip Test Egzersizi</h2>
-            <h3 class="section-subheading text-muted">
-                Selenium Tooltip Testi
-            </h3>
         </div>
 
-        <div class="row justify-content-center">
-            <div class="col-md-8 text-center">
+    </header>
 
-                <div class="card shadow p-5">
-                    <div class="d-flex justify-content-center flex-wrap gap-3">
 
-                        <a id="gmailTooltip"
-                           class="btn btn-primary btn-xl"
-                           href="#"
-                           data-bs-toggle="tooltip"
-                           data-bs-placement="top"
-                           title="Gmail">
-                            <i class="fas fa-envelope"></i>
-                        </a>
+    <section class="page-section bg-light" id="tooltip-test">
 
-                        <a id="googleTooltip"
-                           class="btn btn-primary btn-xl"
-                           href="#"
-                           data-bs-toggle="tooltip"
-                           data-bs-placement="top"
-                           title="Google">
-                            <i class="fab fa-google"></i>
-                        </a>
+        <div class="container">
 
-                        <a id="youtubeTooltip"
-                           class="btn btn-primary btn-xl"
-                           href="#"
-                           data-bs-toggle="tooltip"
-                           data-bs-placement="top"
-                           title="YouTube">
-                            <i class="fab fa-youtube"></i>
-                        </a>
+            <div class="text-center">
 
-                        <a id="githubTooltip"
-                           class="btn btn-primary btn-xl"
-                           href="#"
-                           data-bs-toggle="tooltip"
-                           data-bs-placement="top"
-                           title="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
+                <h2 class="section-heading text-uppercase">
+                    Selenium Tooltip Test Egzersizi
+                </h2>
 
-                        <a id="facebookTooltip"
-                           class="btn btn-primary btn-xl"
-                           href="#"
-                           data-bs-toggle="tooltip"
-                           data-bs-placement="top"
-                           title="Facebook">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
+                <h3 class="section-subheading text-muted">
+                    Selenium Tooltip Testi
+                </h3>
 
-                        <a id="rssTooltip"
-                           class="btn btn-primary btn-xl"
-                           href="#"
-                           data-bs-toggle="tooltip"
-                           data-bs-placement="top"
-                           title="RSS">
-                            <i class="fas fa-rss"></i>
-                        </a>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <div class="card shadow p-5">
+                        <div class="d-flex justify-content-center flex-wrap gap-3">
+                            <a id="gmailTooltip"
+                               class="btn btn-primary btn-xl"
+                               href="#"
+                               data-bs-toggle="tooltip"
+                               data-bs-placement="top"
+                               title="Gmail">
+
+                                <i class="fas fa-envelope"></i>
+                            </a>
+
+                            <a id="googleTooltip"
+                               class="btn btn-primary btn-xl"
+                               href="#"
+                               data-bs-toggle="tooltip"
+                               data-bs-placement="top"
+                               title="Google">
+
+                                <i class="fab fa-google"></i>
+
+                            </a>
+
+                            <a id="youtubeTooltip"
+                               class="btn btn-primary btn-xl"
+                               href="#"
+                               data-bs-toggle="tooltip"
+                               data-bs-placement="top"
+                               title="YouTube">
+
+                                <i class="fab fa-youtube"></i>
+
+                            </a>
+
+                            <a id="githubTooltip"
+                               class="btn btn-primary btn-xl"
+                               href="#"
+                               data-bs-toggle="tooltip"
+                               data-bs-placement="top"
+                               title="GitHub">
+
+                                <i class="fab fa-github"></i>
+
+                            </a>
+
+                            <a id="facebookTooltip"
+                               class="btn btn-primary btn-xl"
+                               href="#"
+                               data-bs-toggle="tooltip"
+                               data-bs-placement="top"
+                               title="Facebook">
+
+                                <i class="fab fa-facebook-f"></i>
+
+                            </a>
+
+                            <a id="rssTooltip"
+                               class="btn btn-primary btn-xl"
+                               href="#"
+                               data-bs-toggle="tooltip"
+                               data-bs-placement="top"
+                               title="RSS">
+
+                                <i class="fas fa-rss"></i>
+
+                            </a>
+
+                        </div>
 
                     </div>
 
                 </div>
 
             </div>
+
         </div>
 
-    </div>
+    </section>
+
+    <script>
+
+        const tooltipTriggerList =
+            [].slice.call(
+                document.querySelectorAll('[data-bs-toggle="tooltip"]')
+            );
+
+        tooltipTriggerList.map(function (tooltipTriggerEl) {
+
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+
+        });
+
+    </script>
+
 </section>
 
-
-
-<footer class="footer py-4">
-              <div class="container">
-                  <div class="row align-items-center">
-                      <div class="col-lg-4 text-lg-start">Copyright &copy; Your Website 2025</div>
-                      <div class="col-lg-4 my-3 my-lg-0">
-                          <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                          <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                          <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                      </div>
-                      <div class="col-lg-4 text-lg-end">
-                          <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
-                          <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
-                      </div>
-                  </div>
-              </div>
-          </footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="/js/scripts.js"></script>
-</body>
 </html>

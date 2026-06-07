@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" xmlns:th="https://www.thymeleaf.org" th:fragment="Layout(content)">
 <head>
     <meta charset="UTF-8">
     <title>404 - Sayfa Bulunamadı</title>
@@ -15,7 +15,6 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
-        /* Tam ekran GIF */
         .error-container {
             position: relative;
             width: 100vw;
@@ -24,7 +23,6 @@
             background-size: cover;
         }
 
-        /* Ortadaki yazı alanı */
         .error-box {
             position: absolute;
             top: 50%;

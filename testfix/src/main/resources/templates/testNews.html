@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="tr"
+      xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{base :: Layout(~{::section})}">
+
+<section>
+
+    <header class="masthead">
+
+        <div class="container">
+
+            <div class="masthead-heading text-uppercase">
+                Test Haberleri
+            </div>
+
+            <div class="masthead-subheading">
+                Yazılım Test Dünyasındaki Güncel Gelişmeler
+            </div>
+
+        </div>
+
+    </header>
+
+    <section class="page-section bg-light">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+                <div class="col-lg-6"
+                     th:each="news : ${newsList}">
+
+                    <div class="card shadow h-100">
+
+                        <img th:src="${news.imageUrl}"
+                             class="card-img-top"
+                             style="height:250px;object-fit:cover;">
+
+                        <div class="card-body">
+
+                            <h4 th:text="${news.title}"></h4>
+
+							<p class="text-muted small"
+							   th:text="${#temporals.format(news.createdAt, 'dd/MM/yyyy HH:mm')}">
+							</p>
+
+                            <p th:text="${news.content}"></p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</section>
+
+</html>

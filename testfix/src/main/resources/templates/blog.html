@@ -1,337 +1,272 @@
 <!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="utf-8" />
-    <title>BLOG - TESTFIX</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<html lang="tr"
+      xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{base :: Layout(~{::section})}">
 
-    <link rel="icon" href="/assets/favicon.ico" />
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700" rel="stylesheet" />
-    <link href="/css/styles.css" rel="stylesheet" />
-</head>
+<section>
+    <header class="masthead">
 
-<body id="page-top">
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-    <div class="container">
-		<a class="navbar-brand" href="#page-top">
-						    <img src="/assets/img/testfixx.png" alt="TESTFIX Logo" />
-						</a>
+        <div class="container">
 
-        <button class="navbar-toggler" type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarResponsive">
-            Menu <i class="fas fa-bars ms-1"></i>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-				<li class="nav-item"><a class="nav-link" href="/">Ana Sayfa</a></li>
-				<li class="nav-item"><a class="nav-link" href="/about">Hakkımızda</a></li>
-		        <li class="nav-item"><a class="nav-link" href="/services">Hizmetlerimiz</a></li>
-				<li class="nav-item dropdown">
-				    <a class="nav-link dropdown-toggle"
-				       href="#"
-				       id="testDropdown"
-				       role="button"
-				       data-bs-toggle="dropdown"
-				       aria-expanded="false">
-				        Test Pratikleri
-				    </a>
-
-				    <ul class="dropdown-menu">
-				        <li>
-							<a class="dropdown-item" href="/testExercises/tooltip">
-						        Tooltip Testleri
-						  </a>
-				        </li>
-				        <li>
-				            <a class="dropdown-item" href="/testExercises/loginTest">
-				                Login Testleri
-				            </a>
-				        </li>
-				        <li>
-				            <a class="dropdown-item" href="/testExercises/dragAndDropAction">
-				                Drag & Drop Testleri
-				            </a>
-				        </li>
-						<li>
-										 		  <a class="dropdown-item" href="/testExercises/popup">
-												        Popup Testleri
-											       </a>
-												</li>
-												<a class="dropdown-item" href="/testExercises/apiTest">
-																																						       Apı Testleri
-																																						      </a>
-																																					    </li>
-																																						<li>
-																																																							 																		 <a class="dropdown-item" href="/testExercises/uploadDownload">
-																																																							 																			    Upload-Download Testleri
-																																																							 																	      </a>
-																																																							 																		 </li>
-				    </ul>
-				</li>
-
-				<li class="nav-item"><a class="nav-link active" href="/blog">Blog</a></li>
-				<li class="nav-item dropdown">
-							    <a class="nav-link dropdown-toggle"
-							       href="#"
-							       role="button"
-							       data-bs-toggle="dropdown"
-							       style="display:flex; align-items:center; gap:6px;">
-
-							        <img src="/assets/img/flags/tr.png"
-							             alt="TR"
-							             style="width:21px; height:21px; border-radius:2px;">
-							        Turkısh
-							    </a>
-
-							    <ul class="dropdown-menu dropdown-menu-end">
-							        <li>
-							            <a class="dropdown-item"
-							               href="/#"
-							               style="display:flex; align-items:center; gap:6px;">
-							                <img src="/assets/img/flags/tr.png"
-							                     alt="TR"
-							                     style="width:21px; height:21px; border-radius:2px;">
-							                Turkısh
-							            </a>
-							        </li>
-							        <li>
-							            <a class="dropdown-item"
-							               href="/#"
-							               style="display:flex; align-items:center; gap:6px;">
-							                <img src="/assets/img/flags/eng.png"
-							                     alt="EN"
-							                     style="width:21px; height:21px; border-radius:2px;">
-							                Englısh
-							            </a>
-							        </li>
-							    </ul>
-							</li>
-			    <li class="nav-item"><a class="nav-link" href="/contact"> Whatsapp'dan Bize Ulaşın</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-<header class="masthead">
-    <div class="container">
-        <div class="masthead-heading text-uppercase">BLOG</div>
-        <div class="masthead-subheading">TESTFIX / Blog</div>
-    </div>
-</header>
-
-<section class="page-section bg-light">
-    <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="section-heading text-uppercase">Selenium Test Otomasyonu</h2>
-            <p class="text-muted">
-                Selenium, test otomasyonu, mülakat soruları ve gerçek proje deneyimleri
-            </p>
-        </div>
-
-        <div class="row">
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 shadow">
-                    <div class="card-body">
-                        <h5 class="card-title">Selenium Nedir?</h5>
-                        <p class="card-text">
-                            Selenium, web uygulamalarını otomatik test etmek için kullanılan
-                            açık kaynaklı bir test otomasyon aracıdır.
-                        </p>
-                        <ul>
-                            <li>Web tabanlı testler</li>
-                            <li>Java, Python, C# desteği</li>
-                            <li>Cross-browser testing</li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="masthead-heading text-uppercase">
+                BLOG
             </div>
 
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 shadow">
-                    <div class="card-body">
-                        <h5 class="card-title">Selenium WebDriver</h5>
-                        <p class="card-text">
-                            WebDriver, tarayıcıyı doğrudan kontrol ederek gerçek kullanıcı
-                            davranışlarını simüle eder.
-                        </p>
-                        <pre>
-                        driver.findElement(By.id("email"))
-                        .sendKeys("deneme@denemegmail.com");
-                        </pre>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 shadow">
-                    <div class="card-body">
-                        <h5 class="card-title">Locator Stratejileri</h5>
-                        <p class="card-text">
-                            Sağlam testler için doğru locator kullanımı kritik öneme sahiptir.
-                        </p>
-                        <ul>
-                            <li>id (en iyi cünkü id tektir)</li>
-                            <li>name</li>
-                            <li>cssSelector</li>
-                            <li>xpath</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-      
-            <div class="col-md-6 mb-4">
-                <div class="card h-100 shadow">
-                    <div class="card-body">
-                        <h5 class="card-title">Wait Kullanımı (Implicit & Explicit)</h5>
-                        <p class="card-text">
-                            Thread.sleep yerine WebDriverWait kullanmak test stabilitesini artırır.
-                        </p>
-                        <pre>
-                        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-                        wait.until(ExpectedConditions
-                        .visibilityOfElementLocated(By.id("login")));
-                        </pre>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 mb-4">
-                <div class="card h-100 shadow">
-                    <div class="card-body">
-                        <h5 class="card-title">Selenium + TestNG</h5>
-                        <p class="card-text">
-                            TestNG ile test senaryoları daha düzenli ve yönetilebilir hale gelir.
-                        </p>
-                        <ul>
-                            <li>@BeforeMethod</li>
-                            <li>@Test</li>
-                            <li>@AfterMethod</li>
-                            <li>Parallel Test</li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="masthead-subheading">
+                TESTFIX / Blog
             </div>
 
         </div>
-		
-		
-	
-		<div class="row mt-5">
-		    <div class="col-lg-10 mx-auto">
 
-		        <h2 class="text-uppercase mb-4">
-		            QA Test Mülakat Soruları
-		        </h2>
+    </header>
 
-		        <p>
-		            Kalite Güvence (QA), yazılım geliştirme süreçlerinin olmazsa olmaz bir parçasıdır.
-		            QA Test Uzmanı, Kalite Mühendisi veya Test Otomasyon Mühendisi pozisyonları için yapılan
-		            mülakatlarda, adayların test metodolojileri, hata yönetimi, otomasyon araçları ve
-		            yazılım geliştirme süreçlerine hakimiyeti detaylı bir şekilde incelenir.
-		        </p>
+    <section class="page-section bg-light">
 
-		        <p>
-		            Bu yazıda, QA test mülakatlarında karşınıza çıkabilecek 10 kritik soruyu ve
-		            bunlara nasıl yanıt verebileceğinizi detaylı şekilde ele aldık.
-		        </p>
+        <div class="container">
 
-		        <h4>1. Yazılım Testinin Temel Amaçları Nelerdir?</h4>
-		        <ul>
-		            <li>Hataları tespit etmek</li>
-		            <li>Kaliteyi ve kullanıcı deneyimini artırmak</li>
-		            <li>Riskleri azaltmak</li>
-		            <li>Regülasyon ve standartlara uyumu sağlamak</li>
-		        </ul>
+            <div class="text-center mb-5">
 
-		        <h4>2. Black Box Test ve White Box Test Arasındaki Farklar</h4>
-		        <p>
-		            <strong>Black Box Test:</strong> Kod yapısı bilinmeden giriş ve çıkışlara odaklanır.<br>
-		            <strong>White Box Test:</strong> Kod yapısı ve algoritmalar üzerinden yapılan testlerdir.<br>
-		            <strong>Gray Box Test:</strong> Her iki yaklaşımın birleşimidir (ör. API testleri).
-		        </p>
+                <h1 class="section-heading text-uppercase">
+                    QA Test Mülakat Soruları
+                </h1>
 
-		        <h4>3. Test Senaryosu ve Test Case Arasındaki Fark</h4>
-		        <p>
-		            Test senaryosu, yüksek seviyeli test amacını ifade ederken,
-		            test case testin adım adım nasıl yapılacağını tanımlar.
-		        </p>
+                <p class="section-subheading text-muted">
+                    Selenium, API Testing, Regression Test ve QA süreçleri hakkında kapsamlı rehber
+                </p>
 
-		        <pre class="bg-light p-3 rounded">
-	           	Kullanıcı adı: deneme@gmail.com
-		        Şifre: 123456
-		        Giriş Yap → Başarılı mesaj doğrulanır
-		        </pre>
+            </div>
 
-		        <h4>4. Regression Test Nedir?</h4>
-		        <p>
-		            Yeni bir geliştirme veya hata düzeltmesinden sonra,
-		            mevcut fonksiyonların bozulmadığını doğrulamak için yapılır.
-		        </p>
+            <div class="row mb-5">
 
-		        <h4>5. Selenium Nedir?</h4>
-		        <p>
-		            Selenium, web uygulamalarını otomatik test etmek için kullanılan
-		            açık kaynaklı bir test otomasyon aracıdır.
-		        </p>
+                <div class="col-lg-10 mx-auto">
 
-		        <h4>6. Bug Lifecycle (Hata Yaşam Döngüsü)</h4>
-		        <p>
-		            New → Assigned → In Progress → Fixed → Tested → Closed
-		        </p>
+                    <div class="blog-card">
 
-		        <h4>7. Performans Testi Türleri</h4>
-		        <ul>
-		            <li>Load Test</li>
-		            <li>Stress Test</li>
-		            <li>Endurance Test</li>
-		        </ul>
+                        <p>
+                            Kalite Güvence (QA), modern yazılım geliştirme süreçlerinin en kritik parçalarından biridir.
+                            Günümüzde şirketler yalnızca çalışan uygulamalar değil,
+                            aynı zamanda güvenilir, performanslı ve sürdürülebilir yazılımlar geliştirmeyi hedeflemektedir.
+                        </p>
 
-		        <h4>8. Agile & Scrum’da QA’nın Rolü</h4>
-		        <p>
-		            QA ekipleri sprint boyunca test, otomasyon ve kalite güvencesinden sorumludur.
-		        </p>
+                        <p>
+                            QA pozisyonları (QA Engineer, Test Automation Engineer, Software Tester)
+                            özellikle son yıllarda ciddi şekilde önem kazanmıştır.
+                            Selenium, API testing ve Agile süreçlerine hakim adaylar
+                            sektörde daha hızlı öne çıkmaktadır.
+                        </p>
 
-		        <h4>9. API Testi Nasıl Yapılır?</h4>
-		        <p>
-		            Manuel testler Postman ile, otomasyon testleri ise
-		            RestAssured, Karate ve SoapUI gibi araçlarla yapılır.
-		        </p>
+                        <p>
+                            Bu içerik, yalnızca mülakat sorularını değil,
+                            aynı zamanda gerçek proje perspektifiyle QA düşünce yapısını da anlatmayı hedefler.
+                        </p>
 
-		        <h4>10. Page Object Model (POM) Nedir?</h4>
-		        <p>
-		            Page Object Model, test kodlarını daha okunabilir,
-		            sürdürülebilir ve bakımı kolay hale getiren bir tasarım desenidir.
-		        </p>
+                    </div>
 
-		    </div>
-		</div>
+                </div>
 
-    </div>
+            </div>
+
+            <div class="row mb-5">
+
+                <div class="col-lg-10 mx-auto">
+
+                    <div class="blog-card">
+
+                        <h3 class="blog-title mb-3">
+                            İçindekiler
+                        </h3>
+
+                        <ul>
+                            <li>Yazılım Testinin Temel Amaçları</li>
+                            <li>Black Box vs White Box</li>
+                            <li>Test Case vs Test Scenario</li>
+                            <li>Regression Test</li>
+                            <li>Selenium</li>
+                            <li>Bug Lifecycle</li>
+                            <li>API Testing</li>
+                            <li>POM</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="row">
+
+                <div class="col-lg-10 mx-auto">
+
+                    <!-- 1 -->
+                    <div class="blog-card mb-4">
+                        <h3>1. Yazılım Testinin Temel Amaçları</h3>
+
+                        <p>
+                            QA yalnızca bug bulma süreci değildir.
+                            Asıl amaç yazılımın güvenilirliğini ve kullanıcı deneyimini artırmaktır.
+                        </p>
+
+                        <p>
+                            Büyük projelerde küçük hatalar bile ciddi maliyetler doğurabilir.
+                            Bu yüzden test süreçleri yazılım yaşam döngüsünün merkezinde yer alır.
+                        </p>
+
+                        <ul>
+                            <li>Hata tespiti</li>
+                            <li>Kalite güvence</li>
+                            <li>Risk azaltma</li>
+                            <li>Standart uyumu</li>
+                        </ul>
+                    </div>
+
+                    <div class="blog-card mb-4">
+                        <h3>2. Black Box vs White Box Test</h3>
+
+                        <p>
+                            Black Box test, sistemin iç yapısına bakmadan yapılan test yaklaşımıdır.
+                        </p>
+
+                        <p>
+                            White Box test ise kod seviyesinde doğrulama yapılmasıdır.
+                        </p>
+
+                        <p>
+                            Gerçek projelerde bu iki yaklaşım birlikte kullanılır.
+                        </p>
+                    </div>
+
+       
+                    <div class="blog-card mb-4">
+                        <h3>3. Test Case ve Test Scenario</h3>
+
+                        <p>
+                            Test scenario genel hedefi tanımlar.
+                            Test case ise bu hedefin adım adım nasıl test edileceğini belirtir.
+                        </p>
+
+                        <p>
+                            Gerçek projelerde zayıf test case yazımı,
+                            production ortamına kritik hataların çıkmasına neden olabilir.
+                        </p>
+
+<pre class="code-block">
+1. Username gir
+2. Password gir
+3. Login butonuna tıkla
+4. Sonucu doğrula
+</pre>
+                    </div>
+
+                    <div class="blog-card mb-4">
+                        <h3>4. Regression Test</h3>
+
+                        <p>
+                            Regression test, yeni geliştirmeler sonrası mevcut sistemin bozulmadığını doğrular.
+                        </p>
+
+                        <p>
+                            Özellikle büyük sistemlerde manuel regression test çok maliyetlidir.
+                            Bu yüzden otomasyon kritik hale gelir.
+                        </p>
+
+                        <p>
+                            CI/CD pipeline içinde regression testler artık standart hale gelmiştir.
+                        </p>
+                    </div>
+
+
+                    <div class="blog-card mb-4">
+                        <h3>5. Selenium</h3>
+
+                        <p>
+                            Selenium, web UI test otomasyonu için en yaygın kullanılan araçtır.
+                        </p>
+
+                        <p>
+                            Genellikle TestNG, JUnit ve Jenkins ile birlikte kullanılır.
+                        </p>
+
+<pre class="code-block">
+driver.get("https://example.com");
+driver.findElement(By.id("email")).sendKeys("test@mail.com");
+</pre>
+                    </div>
+
+                    <div class="blog-card mb-4">
+                        <h3>6. Bug Lifecycle</h3>
+
+                        <p>
+                            Bir bug'ın yaşam döngüsü yazılım kalitesini doğrudan etkiler.
+                        </p>
+
+                        <ul>
+                            <li>New</li>
+                            <li>Assigned</li>
+                            <li>In Progress</li>
+                            <li>Fixed</li>
+                            <li>Retested</li>
+                            <li>Closed</li>
+                        </ul>
+                    </div>
+
+                    <div class="blog-card mb-4">
+                        <h3>7. API Testing</h3>
+
+                        <p>
+                            API testleri modern microservice mimarilerinde kritik öneme sahiptir.
+                        </p>
+
+                        <p>
+                            UI bağımsız test yapılmasını sağlar.
+                        </p>
+
+<pre class="code-block">
+GET /users → 200 OK
+</pre>
+                    </div>
+
+                    <div class="blog-card mb-4">
+                        <h3>8. Page Object Model</h3>
+
+                        <p>
+                            POM, test kodlarının daha sürdürülebilir olmasını sağlar.
+                        </p>
+
+                        <p>
+                            Büyük projelerde test bakım maliyetini ciddi şekilde düşürür.
+                        </p>
+                    </div>
+
+                    <div class="blog-card">
+
+                        <h3>Sonuç</h3>
+
+                        <p>
+                            QA alanında başarılı olmak yalnızca teorik bilgiye bağlı değildir.
+                            Gerçek test senaryoları yazabilmek ve otomasyon araçlarını kullanabilmek kritik öneme sahiptir.
+                        </p>
+
+                        <p>
+                            Özellikle Selenium, API testing ve CI/CD süreçleri
+                            günümüzde QA rollerinin temel beklentileri haline gelmiştir.
+                        </p>
+
+                        <p>
+                            Düzenli pratik ve gerçek proje deneyimi,
+                            mülakatlarda sizi doğrudan bir adım öne taşır.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
 </section>
 
-		
-		<footer class="footer py-4">
-		              <div class="container">
-		                  <div class="row align-items-center">
-		                      <div class="col-lg-4 text-lg-start">Copyright &copy; Your Website 2025</div>
-		                      <div class="col-lg-4 my-3 my-lg-0">
-		                          <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-		                          <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-		                          <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-		                      </div>
-		                      <div class="col-lg-4 text-lg-end">
-		                          <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
-		                          <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
-		                      </div>
-		                  </div>
-		              </div>
-		          </footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="/js/scripts.js"></script>
-</body>
 </html>
